@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Ad Combinator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Ad Combinator</h1>
-      <p>Below are the dynamically generated ads with hooks, middles, and endings—plus videos!</p>
-    </header>
-
-    <main>
-      <div id="ads-container">
-        <!-- Ads will be injected here by script.js -->
-      </div>
-    </main>
-
-    <!-- Load order matters: data first, then script. -->
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Ad Combinator Spreadsheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Ad Combinator - Spreadsheet Editor</h1>
+    <p>Edit and optimize ad sections dynamically in a spreadsheet layout.</p>
+  </header>
+  <main>
+    <table id="ads-table">
+      <thead>
+        <tr>
+          <th>Ad #</th>
+          <th>Hook</th>
+          <th>Middle</th>
+          <th>Ending</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be dynamically populated -->
+      </tbody>
+    </table>
+  </main>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
