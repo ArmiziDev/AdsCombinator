@@ -1,28 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Video Ad Combinator</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/modal.css">
-    <link rel="stylesheet" href="styles/video.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drag-and-Drop Ad Creator</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <!-- Include components -->
-    <div id="header"></div>
-    <main class="max-w-7xl mx-auto px-4">
-        <div id="componentLibrary"></div>
-        <div id="adBuilder"></div>
-    </main>
-    <div id="modals"></div>
 
-    <!-- Scripts -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/dragAndDrop.js"></script>
-    <script src="scripts/videoPreview.js"></script>
-    <script src="scripts/adBuilder.js"></script>
-    <script src="scripts/adNotes.js"></script>
+  <h1>Ad Creator</h1>
+
+  <!-- Sidebar with Hooks, Middle Sections, Endings -->
+  <div id="sidebar">
+    <h2>Hooks</h2>
+    <div class="section-list" id="hooks-list">
+      <!-- These items are draggable, each with data attributes for the section info -->
+      <div class="section-item"
+           draggable="true"
+           data-title="Hook #1"
+           data-description="This is a quick, attention-grabbing hook #1."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_1">
+        Hook #1
+      </div>
+      <div class="section-item"
+           draggable="true"
+           data-title="Hook #2"
+           data-description="This is an attention-grabbing hook #2."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_2">
+        Hook #2
+      </div>
+      <div class="section-item"
+           draggable="true"
+           data-title="Hook #3"
+           data-description="This is an attention-grabbing hook #3."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_3">
+        Hook #3
+      </div>
+      <!-- Add more hooks as needed -->
+    </div>
+
+    <h2>Middle Sections</h2>
+    <div class="section-list" id="middles-list">
+      <div class="section-item"
+           draggable="true"
+           data-title="Middle #1"
+           data-description="Here is the main content for middle #1."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_4">
+        Middle #1
+      </div>
+      <div class="section-item"
+           draggable="true"
+           data-title="Middle #2"
+           data-description="Here is the main content for middle #2."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_5">
+        Middle #2
+      </div>
+      <div class="section-item"
+           draggable="true"
+           data-title="Middle #3"
+           data-description="Here is the main content for middle #3."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_6">
+        Middle #3
+      </div>
+      <!-- Add more middles as needed -->
+    </div>
+
+    <h2>Endings</h2>
+    <div class="section-list" id="endings-list">
+      <div class="section-item"
+           draggable="true"
+           data-title="Ending #1"
+           data-description="Here is the final call to action for ending #1."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_7">
+        Ending #1
+      </div>
+      <div class="section-item"
+           draggable="true"
+           data-title="Ending #2"
+           data-description="Here is the final call to action for ending #2."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_8">
+        Ending #2
+      </div>
+      <div class="section-item"
+           draggable="true"
+           data-title="Ending #3"
+           data-description="Here is the final call to action for ending #3."
+           data-video="https://www.youtube.com/embed/VIDEO_ID_9">
+        Ending #3
+      </div>
+      <!-- Add more endings as needed -->
+    </div>
+  </div>
+
+  <!-- 18 Ad Slots (our "spreadsheet" of 18 ad boxes) -->
+  <div id="ad-grid">
+    <h2>Ad Slots</h2>
+    <div id="ad-slots-container">
+      <!-- 18 boxes -->
+      <!-- Each box is a drop target -->
+      <!-- You can style them as a grid or a table. For demonstration, let's do a grid of 3x6. -->
+      <div class="ad-slot" id="ad-slot-1"  data-slot-index="1"></div>
+      <div class="ad-slot" id="ad-slot-2"  data-slot-index="2"></div>
+      <div class="ad-slot" id="ad-slot-3"  data-slot-index="3"></div>
+      <div class="ad-slot" id="ad-slot-4"  data-slot-index="4"></div>
+      <div class="ad-slot" id="ad-slot-5"  data-slot-index="5"></div>
+      <div class="ad-slot" id="ad-slot-6"  data-slot-index="6"></div>
+      <div class="ad-slot" id="ad-slot-7"  data-slot-index="7"></div>
+      <div class="ad-slot" id="ad-slot-8"  data-slot-index="8"></div>
+      <div class="ad-slot" id="ad-slot-9"  data-slot-index="9"></div>
+      <div class="ad-slot" id="ad-slot-10" data-slot-index="10"></div>
+      <div class="ad-slot" id="ad-slot-11" data-slot-index="11"></div>
+      <div class="ad-slot" id="ad-slot-12" data-slot-index="12"></div>
+      <div class="ad-slot" id="ad-slot-13" data-slot-index="13"></div>
+      <div class="ad-slot" id="ad-slot-14" data-slot-index="14"></div>
+      <div class="ad-slot" id="ad-slot-15" data-slot-index="15"></div>
+      <div class="ad-slot" id="ad-slot-16" data-slot-index="16"></div>
+      <div class="ad-slot" id="ad-slot-17" data-slot-index="17"></div>
+      <div class="ad-slot" id="ad-slot-18" data-slot-index="18"></div>
+    </div>
+  </div>
+
+  <!-- Modal for displaying detail (description & video) -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-content">
+      <span id="modal-close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <iframe id="modal-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- JS File -->
+  <script src="script.js"></script>
+
 </body>
 </html>
