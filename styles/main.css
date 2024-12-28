@@ -1,0 +1,34 @@
+:root {
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --secondary: #64748b;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.header-gradient {
+    background: linear-gradient(to right, var(--primary), var(--primary-light));
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+}

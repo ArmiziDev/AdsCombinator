@@ -1,0 +1,43 @@
+.card {
+    background: var(--surface);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.component-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.component-card:hover .play-icon {
+    opacity: 1;
+}
+
+.play-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.droppable {
+    border: 2px dashed #e2e8f0;
+    min-height: 100px;
+    transition: all 0.2s ease;
+}
+
+.droppable.active {
+    border-color: var(--primary);
+    background: #f0f7ff;
+}
