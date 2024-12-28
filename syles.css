@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    margin-top: 1rem;
+  }
+  
+  #sidebar {
+    width: 300px;
+    float: left;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+  
+  .section-list {
+    margin-bottom: 1rem;
+  }
+  
+  .section-item {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: #f2f2f2;
+    cursor: move; /* indicates drag handle */
+    border-radius: 4px;
+  }
+  
+  #ad-grid {
+    margin: 1rem;
+    width: 600px;
+  }
+  
+  #ad-slots-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .ad-slot {
+    border: 2px dashed #ccc;
+    height: 100px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* On hover, highlight the drop target */
+  .ad-slot.drag-over {
+    background-color: #c8ffc8;
+    border-color: #00b200;
+  }
+  
+  /* Modal styling */
+  #modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    max-width: 90%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 6px;
+  }
+  
+  #modal-close {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
