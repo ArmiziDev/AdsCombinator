@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #fafafa;
+}
+
+h1, h4 {
+  margin-bottom: 0.5em;
+}
+
+.ad-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.section {
+  margin-bottom: 1em;
+}
+
+video {
+  display: block;
+  margin-top: 0.5em;
+  max-width: 100%;
+  height: auto;
+}
